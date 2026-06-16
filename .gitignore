@@ -1,0 +1,21 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Vector Database
+faiss_index/
+
+# Node
+frontend/node_modules/
+
+# Build files
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db

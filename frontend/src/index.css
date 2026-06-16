@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: Inter, sans-serif;
+}
+
+#root {
+  height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 280px;
+  background: #111827;
+  border-right: 1px solid #1f2937;
+  padding: 24px;
+}
+
+.sidebar-header {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.empty-state {
+  background: #1e293b;
+  color: #60a5fa;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.pdf-item {
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* Main */
+
+.main-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  padding: 40px;
+}
+
+.hero-section h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: white;
+}
+
+.hero-section p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+/* Upload */
+
+.upload-card {
+  margin-top: 30px;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.upload-label {
+  display: block;
+  margin-bottom: 12px;
+  color: white;
+  font-weight: 600;
+}
+
+.upload-card input {
+  color: white;
+}
+
+/* Chat Area */
+
+.chat-container {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  margin-top: 24px;
+
+  padding-right: 8px;
+}
+
+.welcome-card {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.welcome-card h2 {
+  color: white;
+}
+
+.welcome-card p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.suggestions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.suggestions span {
+  background: #1e293b;
+  color: #60a5fa;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+/* Messages */
+
+.message-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.message-user {
+  justify-content: flex-end;
+}
+
+.message-ai {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 65%;
+  padding: 16px;
+  border-radius: 16px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.message-user .message-bubble {
+  background: #2563eb;
+  color: white;
+}
+
+.message-ai .message-bubble {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+/* Input */
+
+.chat-input-container {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 20px;
+
+  position: sticky;
+  bottom: 0;
+
+  background: #0f172a;
+
+  padding-top: 12px;
+}
+
+.chat-input {
+  flex: 1;
+  background: #111827;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.send-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 0 24px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.send-btn:hover {
+  background: #1d4ed8;
+}
+
+.upload-card {
+  background: #111c38;
+  border: 1px solid #243250;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.upload-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.upload-zone {
+  display: block;
+  cursor: pointer;
+}
+
+.upload-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 22px;
+
+  border: 2px dashed #32466f;
+  border-radius: 14px;
+
+  transition: 0.2s;
+}
+
+.upload-content:hover {
+  background: rgba(255,255,255,0.03);
+  border-color: #4f7cff;
+}
+
+.upload-icon {
+  font-size: 36px;
+}
+
+.upload-main {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.upload-sub {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.selected-file {
+  margin-top: 14px;
+
+  padding: 10px 14px;
+
+  background: #1b2847;
+
+  border-radius: 10px;
+
+  color: #cbd5e1;
+}
+
+.add-pdf-btn {
+  margin-top: 16px;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 12px 24px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  width: 220px;  /* IMPORTANT */
+  display: inline-block;
+}
+
+.add-pdf-btn:hover {
+  background: #1d4ed8;
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 6px;
+
+  width: fit-content;
+
+  padding: 14px 18px;
+
+  background: #1e293b;
+
+  border-radius: 14px;
+
+  margin-bottom: 12px;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #60a5fa;
+
+  animation: bounce 1.2s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
